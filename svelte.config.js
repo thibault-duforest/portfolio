@@ -14,6 +14,10 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true,
+			prerender: {
+				crawl: true,
+				enabled: true,
+			},
 			paths: {
 				base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 			}

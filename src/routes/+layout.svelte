@@ -4,8 +4,6 @@
 	import '../app.css';
 	
 	let { children } = $props();
-
-	export const prerender = true;
 </script>
 
 <ParaglideJS {i18n}>
