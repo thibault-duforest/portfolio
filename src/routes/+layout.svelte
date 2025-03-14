@@ -9,7 +9,7 @@
 </script>
 
 <ParaglideJS {i18n}>
-	<div class="flex flex-col md:flex-row h-screen">
+	<div class="max-w-7xl m-auto flex flex-col md:flex-row h-screen">
 		<div class="w-full md:w-52 bg-gray-800 text-white p-4 md:h-auto h-15 overflow-hidden">
 			<Nav />
 		</div>
