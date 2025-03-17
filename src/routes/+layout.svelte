@@ -4,17 +4,17 @@
 	import { i18n } from '$lib/i18n';
 	import Nav from '$lib/Nav.svelte';
 	import '../app.css';
-	
+
 	let { children } = $props();
 </script>
 
 <ParaglideJS {i18n}>
-	<div class="max-w-7xl m-auto flex flex-col md:flex-row h-screen">
-		<div class="w-full md:w-52 bg-gray-800 text-white p-4 md:h-auto h-15 overflow-hidden">
+	<div class="m-auto flex h-screen max-w-7xl flex-col md:flex-row">
+		<div class="h-15 w-full overflow-hidden bg-gray-800 p-4 text-white md:h-auto md:w-52">
 			<Nav />
 		</div>
-	
-		<main class="flex-1 p-4 overflow-auto">
+
+		<main class="flex-1 overflow-auto p-4">
 			{@render children()}
 		</main>
 	</div>
