@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { base } from '$app/paths';
 </script>
 
 <nav>
@@ -12,9 +13,9 @@
 			</li>
 		{/snippet}
 
-		{@render navLink('/', 'Welcome!', 'Return to homepage')}
-		{@render navLink('/about', 'About me', 'Learn more about my profile')}
-		{@render navLink('/projects', 'Portfolio', "Look at Thibault Duforest's realisations")}
-		{@render navLink('/contact', 'Contact me', 'Show contact information')}
+		{@render navLink(`${base}/`, 'Welcome!', 'Return to homepage')}
+		{@render navLink(`${base}/about`, 'About me', 'Learn more about my profile')}
+		{@render navLink(`${base}/projects`, 'Portfolio', "Look at Thibault Duforest's realisations")}
+		{@render navLink(`${base}/contact`, 'Contact me', 'Show contact information')}
 	</ul>
 </nav>

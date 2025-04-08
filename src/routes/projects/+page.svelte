@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	export let data;
 
 	function navigateToProject(slug: string) {
-		goto(`/projects/${slug}`);
+		goto(`${base}/projects/${slug}`);
 	}
 </script>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	import type { queryMatches } from '$lib/types/mediaQuery.js';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
@@ -8,7 +9,7 @@
 	export let data;
 
 	function goBack() {
-		goto('/projects');
+		goto(`${base}/projects`);
 	}
 </script>
 
