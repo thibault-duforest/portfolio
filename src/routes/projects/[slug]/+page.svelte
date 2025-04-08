@@ -8,7 +8,7 @@
 	export let data;
 
 	function goBack() {
-		goto('/portfolio');
+		goto('/projects');
 	}
 </script>
 

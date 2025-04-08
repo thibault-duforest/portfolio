@@ -5,7 +5,7 @@
 	export let data;
 
 	function navigateToProject(slug: string) {
-		goto(`/portfolio/${slug}`);
+		goto(`/projects/${slug}`);
 	}
 </script>
 

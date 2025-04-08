@@ -14,7 +14,7 @@
 
 		{@render navLink('/', 'Welcome!', 'Return to homepage')}
 		{@render navLink('/about', 'About me', 'Learn more about my profile')}
-		{@render navLink('/portfolio', 'Portfolio', "Look at Thibault Duforest' realisations")}
+		{@render navLink('/projects', 'Portfolio', "Look at Thibault Duforest's realisations")}
 		{@render navLink('/contact', 'Contact me', 'Show contact information')}
 	</ul>
 </nav>
