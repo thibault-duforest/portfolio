@@ -4,8 +4,8 @@
 
 	export let data;
 
-	function navigateToProject(projectId: string) {
-		goto(`/portfolio/${projectId}`);
+	function navigateToProject(slug: string) {
+		goto(`/portfolio/${slug}`);
 	}
 </script>
 
@@ -17,7 +17,7 @@
 			<button
 				type="button"
 				class="flex transform cursor-pointer flex-col overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:scale-105 hover:shadow-lg"
-				on:click={() => navigateToProject(project.id.toString())}
+				on:click={() => navigateToProject(project.slug.toString())}
 				in:fly={{ y: 50, duration: 300, delay: 300 }}
 			>
 				<div class="h-48 overflow-hidden">

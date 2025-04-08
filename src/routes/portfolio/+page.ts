@@ -14,6 +14,7 @@ import WonderWeekendLogo from "$lib/assets/images/logos/wonder-weekend-logo.png?
 export async function load() {
   interface Project {
     id: number;
+    slug: string;
     name: string;
     logo: Picture,
     startDate: string;
@@ -24,6 +25,7 @@ export async function load() {
   const projects: Project[] = [
     {
       id: 1,
+      slug: "oscaro",
       name: "Oscaro.com",
       logo: OscaroLogo,
       startDate: "08/2024",
@@ -32,6 +34,7 @@ export async function load() {
     },
     {
       id: 2,
+      slug: "shadow",
       name: "Shadow",
       logo: ShadowLogo,
       startDate: "09/2021",
@@ -40,6 +43,7 @@ export async function load() {
     },
     {
       id: 3,
+      slug: "blade-shadow",
       name: "Blade Shadow",
       logo: ShadowBladeLogo,
       startDate: "01/2019",
@@ -48,6 +52,7 @@ export async function load() {
     },
     {
       id: 4,
+      slug: "accorhotels",
       name: "AccorHotels",
       logo: AccorHotelsLogo,
       startDate: "05/2018",
@@ -56,6 +61,7 @@ export async function load() {
     },
     {
       id: 5,
+      slug: "air-liquide",
       name: "Air Liquide",
       logo: AirliquideLogo,
       startDate: "10/2017",
@@ -64,7 +70,8 @@ export async function load() {
     },
     {
       id: 6,
-      name: "WonderWeekend",
+      slug: "wonder-weekend",
+      name: "Wonder Weekend",
       logo: WonderWeekendLogo,
       startDate: "02/2016",
       endDate: "06/2017",
@@ -72,6 +79,7 @@ export async function load() {
     },
     {
       id: 7,
+      slug: "happy-end",
       name: "Happy End",
       logo: HappyEndLogo,
       startDate: "08/2015",
@@ -80,6 +88,7 @@ export async function load() {
     },
     {
       id: 8,
+      slug: "misc-clients",
       name: "Clients divers",
       logo: CodeLogo,
       startDate: "09/2014",
@@ -88,6 +97,7 @@ export async function load() {
     },
     {
       id: 9,
+      slug: "big-youth",
       name: "Big Youth",
       logo: BigYouthLogo,
       startDate: "11/2014",
@@ -96,7 +106,8 @@ export async function load() {
     },
     {
       id: 10,
-      name: "Mazarine",
+      slug: "mazarine-digital",
+      name: "Mazarine Digital",
       logo: MazarineDigitalLogo,
       startDate: "11/2012",
       endDate: "06/2014",
@@ -104,6 +115,7 @@ export async function load() {
     },
     {
       id: 11,
+      slug: "efficience-digital",
       name: "Efficience Multimédia",
       logo: EfficienceDigitalLogo,
       startDate: "07/2011",

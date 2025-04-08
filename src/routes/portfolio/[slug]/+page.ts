@@ -21,11 +21,10 @@ import ShadowBannerMobile from "$lib/assets/images/banners/shadow-banner-small.p
 import WonderWeekendBanner from "$lib/assets/images/banners/wonder-weekend-banner.png?enhanced"
 import WonderWeekendBannerMobile from "$lib/assets/images/banners/wonder-weekend-banner-small.png?enhanced"
 
-export async function load({ params }: { params: { id: string } }) {
-  const projectId = parseInt(params.id);
-
+export async function load({ params }: { params: { slug: string } }) {
   interface Project {
     id: number;
+    slug: string;
     name: string;
     banner: Picture,
     bannerMobile: Picture,
@@ -43,6 +42,7 @@ export async function load({ params }: { params: { id: string } }) {
   const projects: Project[] = [
     {
       id: 1,
+      slug: "oscaro",
       name: "Oscaro.com",
       banner: OscaroBanner,
       bannerMobile: OscaroBannerMobile,
@@ -64,6 +64,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 2,
+      slug: "shadow",
       name: "Shadow",
       banner: ShadowBanner,
       bannerMobile: ShadowBannerMobile,
@@ -86,6 +87,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 3,
+      slug: "blade-shadow",
       name: "Blade Shadow",
       banner: ShadowBanner,
       bannerMobile: ShadowBannerMobile,
@@ -108,6 +110,7 @@ export async function load({ params }: { params: { id: string } }) {
     {
       id: 4,
       name: "AccorHotels",
+      slug: "accorhotels",
       banner: AccorHotelsBanner,
       bannerMobile: AccorHotelsBannerMobile,
       location: "Issy-les-moulineaux, France",
@@ -127,6 +130,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 5,
+      slug: "air-liquide",
       name: "Air Liquide",
       banner: AirliquideBanner,
       bannerMobile: AirliquideBannerMobile,
@@ -141,6 +145,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 6,
+      slug: "wonder-weekend",
       name: "WonderWeekend",
       banner: WonderWeekendBanner,
       bannerMobile: WonderWeekendBannerMobile,
@@ -157,6 +162,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 7,
+      slug: "happy-end",
       name: "Happy End",
       banner: HappyEndBanner,
       bannerMobile: HappyEndBannerMobile,
@@ -178,6 +184,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 8,
+      slug: "misc-clients",
       name: "Clients divers",
       banner: CodeBanner,
       bannerMobile: CodeBannerMobile,
@@ -197,6 +204,7 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 9,
+      slug: "big-youth",
       name: "Big Youth",
       banner: BigYouthBanner,
       bannerMobile: BigYouthBannerMobile,
@@ -213,7 +221,8 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 10,
-      name: "Mazarine",
+      slug: "mazarine-digital",
+      name: "Mazarine Digital",
       banner: MazarineDigitalBanner,
       bannerMobile: MazarineDigitalBannerMobile,
       location: "Paris, France",
@@ -227,7 +236,8 @@ export async function load({ params }: { params: { id: string } }) {
     },
     {
       id: 11,
-      name: "Efficience Multimédia",
+      slug: "efficience-digital",
+      name: "Efficience Digital",
       banner: EfficienceDigitalBanner,
       bannerMobile: EfficienceDigitalBannerMobile,
       location: "Paris, France",
@@ -241,7 +251,7 @@ export async function load({ params }: { params: { id: string } }) {
     }
   ];
 
-  const project = projects.find(p => p.id === projectId);
+  const project = projects.find(p => p.slug === params.slug);
 
   if (!project) {
     throw new Error('Project not found');
