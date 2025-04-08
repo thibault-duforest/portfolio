@@ -1,4 +1,4 @@
-export async function load({ params }) {
+export async function load({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
 
   const projects = [
