@@ -29,7 +29,6 @@
 				</div>
 				<div class="flex flex-col items-center p-6 text-center">
 					<h2 class="mb-2 text-xl font-semibold">{project.name}</h2>
-					<p>{project.description}</p>
 					<p class="mb-3 text-gray-600">
 						{project.startDate}
 						{#if project.endDate}
