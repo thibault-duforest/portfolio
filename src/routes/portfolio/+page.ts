@@ -1,3 +1,4 @@
+import type { Picture } from 'vite-imagetools';
 import AccorHotelsLogo from "$lib/assets/images/logos/accorhotels-logo.png?enhanced"
 import AirliquideLogo from "$lib/assets/images/logos/airliquide-logo.png?enhanced"
 import BigYouthLogo from "$lib/assets/images/logos/big-youth-logo.png?enhanced"
