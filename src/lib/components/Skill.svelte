@@ -1,18 +1,30 @@
-<script>
+<script lang="ts">
 	export let icon = '';
 	export let name = '';
 	export let color = '';
+
+	const colorVariants: { [key: string]: string } = {
+		blue: 'text-blue-600',
+		cyan: 'text-sky-600',
+		emerald: 'text-emerald-600',
+		gray: 'text-gray-600',
+		green: 'text-green-600',
+		orange: 'text-orange-600',
+		purple: 'text-purple-600',
+		red: 'text-red-600',
+		yellow: 'text-yellow-600'
+	};
 </script>
 
 <div
 	id="skill-{name}"
 	class="flex-start relative flex w-[128px] flex-col items-center justify-center rounded-xl p-6"
 >
-	<div class="mb-4 h-16 w-16 text-{color}-600 transition-transform duration-700">
+	<div class={`${colorVariants[color]} mb-4 h-16 w-16`}>
 		{@html icon}
 	</div>
 
-	<h3 class="mb-2 text-xl font-bold tracking-wide text-gray-800">{name}</h3>
+	<h3 class="mb-2 text-center text-xl font-bold tracking-wide text-gray-800">{name}</h3>
 
 	<!-- Add particule effect WIP -->
 	<!-- <div
