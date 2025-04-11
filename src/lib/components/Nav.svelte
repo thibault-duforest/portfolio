@@ -13,9 +13,9 @@
 			</li>
 		{/snippet}
 
-		{@render navLink(`${base}/`, 'Welcome!', 'Return to homepage')}
-		{@render navLink(`${base}/about`, 'About me', 'Learn more about my profile')}
-		{@render navLink(`${base}/projects`, 'Portfolio', "Look at Thibault Duforest's realisations")}
-		{@render navLink(`${base}/contact`, 'Contact me', 'Show contact information')}
+		{@render navLink(`${base}/`, 'Bienvenue !', "Retourner à la page d'accueil")}
+		{@render navLink(`${base}/about`, 'A propos de moi', 'Découvrez le détail de mon profile')}
+		{@render navLink(`${base}/projects`, 'Portfolio', 'Afficher mes realisations')}
+		{@render navLink(`${base}/contact`, 'Contactez moi', 'Afficher mes informations de contact')}
 	</ul>
 </nav>
