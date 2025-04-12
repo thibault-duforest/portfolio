@@ -1,4 +1,4 @@
-import { paraglide } from '@inlang/paraglide-sveltekit/vite';
+import { paraglideVitePlugin } from '@inlang/paraglide-js'
 import tailwindcss from '@tailwindcss/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -7,19 +7,16 @@ import { defineConfig } from 'vite';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin';
+
 const dirname =
 	typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
 // More info at: https://storybook.js.org/docs/writing-tests/test-addon
 export default defineConfig({
-	plugins: [
-		tailwindcss(),
-		sveltekit(),
-		enhancedImages(),
-		paraglide({
-			project: './project.inlang',
-			outdir: './src/lib/paraglide'
-		})
+	plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
+	tailwindcss(),
+	sveltekit(),
+	enhancedImages(),
 	],
 	test: {
 		workspace: [
