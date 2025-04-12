@@ -25,7 +25,30 @@
 				{data.profile.status}
 			</span>
 		</div>
-		<h3 class="mt-2 text-2xl text-gray-600">{data.profile.title} - {data.profile.experience}</h3>
+		<h3 class="my-2 text-2xl text-gray-600">{data.profile.title} - {data.profile.experience}</h3>
+		<div class="flex items-center">
+			<div class="mr-2 rounded-full">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-6 w-6 text-blue-600"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+					/>
+				</svg>
+			</div>
+			<div>
+				<a href={`mailto:${data.profile.email}`} class="text-blue-600 hover:underline"
+					>{data.profile.email}</a
+				>
+			</div>
+		</div>
 
 		<p class="mt-6 max-w-2xl text-lg text-gray-700">
 			Développeur Front-End expérimenté, j'accompagne les entreprises pour concevoir et optimiser
@@ -47,6 +70,15 @@
 					/>
 				</svg>
 				LinkedIn
+				<svg class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M10 5H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 00-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/></svg
+				>
 			</a>
 			<a
 				href={`https://${data.profile.social.github}`}
@@ -60,6 +92,15 @@
 					/>
 				</svg>
 				GitHub
+				<svg class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M10 5H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 00-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/></svg
+				>
 			</a>
 			<a
 				href={`https://${data.profile.social.github}/portfolio`}
@@ -73,6 +114,15 @@
 					/>
 				</svg>
 				Portfolio fait avec SvelteKit
+				<svg class="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M10 5H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 00-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/></svg
+				>
 			</a>
 		</div>
 	</div>
