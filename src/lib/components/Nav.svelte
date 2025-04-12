@@ -16,6 +16,5 @@
 		{@render navLink(`${base}/`, 'Bienvenue !', "Retourner à la page d'accueil")}
 		{@render navLink(`${base}/about`, 'A propos de moi', 'Découvrez le détail de mon profile')}
 		{@render navLink(`${base}/projects`, 'Portfolio', 'Afficher mes realisations')}
-		{@render navLink(`${base}/contact`, 'Contactez moi', 'Afficher mes informations de contact')}
 	</ul>
 </nav>
