@@ -13,7 +13,11 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/writing-tests/test-addon
 export default defineConfig({
-	plugins: [paraglideVitePlugin({ project: './project.inlang', outdir: './src/paraglide' }),
+	plugins: [paraglideVitePlugin({
+		project: './project.inlang',
+		outdir: './src/lib/paraglide',
+		strategy: ['url', 'preferredLanguage', 'baseLocale']
+	}),
 	tailwindcss(),
 	sveltekit(),
 	enhancedImages(),

@@ -1,11 +1,13 @@
 <script>
 	import Skill from '$lib/components/Skill.svelte';
 	import { skillsData } from '$lib/data/skills.js';
+	// import * as m from '$lib/paraglide/messages.js';
 
 	export let data;
 </script>
 
 <section class="container mx-auto flex flex-col items-center px-6 py-16 md:flex-row md:py-24">
+	<!-- <p>{m['home.welcome']({ username: 'Thibault' })}</p> -->
 	<div class="mb-8 h-48 w-48 flex-shrink-0 md:mr-12 md:mb-0 md:h-64 md:w-64">
 		<div
 			class="h-full w-full overflow-hidden rounded-full border-4 border-white bg-blue-100 shadow-lg"
