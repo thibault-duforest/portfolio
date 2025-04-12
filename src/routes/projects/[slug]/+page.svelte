@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="container mx-auto py-8 md:px-4" in:fade={{ duration: 300 }}>
+<div in:fade={{ duration: 300 }}>
 	<button
 		type="button"
 		on:click={goBack}

@@ -6,7 +6,7 @@
 	export let data;
 </script>
 
-<section class="container mx-auto flex flex-col items-center px-6 py-16 md:flex-row md:py-24">
+<section class="flex flex-col items-center pb-4 md:flex-row md:pb-8">
 	<!-- <p>{m['home.welcome']({ username: 'Thibault' })}</p> -->
 	<div class="mb-8 h-48 w-48 flex-shrink-0 md:mr-12 md:mb-0 md:h-64 md:w-64">
 		<div
@@ -22,8 +22,8 @@
 
 	<div>
 		<div class="flex flex-wrap items-baseline">
-			<h1 class="mr-4 text-4xl font-bold text-gray-800">{data.profile.name}</h1>
-			<span class="text-blue rounded-full bg-blue-100 px-3 py-1 text-xl font-medium">
+			<h1 class="mr-4 text-3xl font-bold text-gray-800 md:text-4xl">{data.profile.name}</h1>
+			<span class="text-blue my-4 rounded-full bg-blue-100 px-3 py-1 text-xl font-medium md:my-0">
 				{data.profile.status}
 			</span>
 		</div>
@@ -130,25 +130,21 @@
 	</div>
 </section>
 
-<section class="py-4">
-	<div class="container mx-auto px-6 text-center xl:text-left">
-		<div class="inline-block xl:pl-[304px]">
-			{#each skillsData as skillCategory}
-				<div class="mb-4">
-					<h2 class="text-left text-2xl font-bold">{skillCategory.name}</h2>
-					<div class="flex flex-wrap items-start justify-evenly gap-6 sm:justify-start">
-						{#each skillCategory.skills as skill}
-							{@const { icon, name, color } = skill}
-							<Skill {icon} {color} {name} />
-						{/each}
-					</div>
-				</div>
-			{/each}
+<section class="inline-block py-4 text-center xl:pl-[306px] xl:text-left">
+	{#each skillsData as skillCategory}
+		<div class="mb-4">
+			<h2 class="text-left text-2xl font-bold">{skillCategory.name}</h2>
+			<div class="flex flex-wrap items-start justify-evenly gap-6 sm:justify-start">
+				{#each skillCategory.skills as skill}
+					{@const { icon, name, color } = skill}
+					<Skill {icon} {color} {name} />
+				{/each}
+			</div>
 		</div>
-	</div>
+	{/each}
 </section>
 
-<section class="container mx-auto px-6 py-16 text-center">
+<section class="py-16 text-center">
 	<h2 class="mb-4 text-3xl font-bold text-gray-800">Intéressé par une collaboration ?</h2>
 	<p class="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
 		Je suis disponible pour des missions freelance. N'hésitez pas à me contacter pour discuter de
