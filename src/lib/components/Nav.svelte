@@ -3,7 +3,14 @@
 	import { base } from '$app/paths';
 
 	import * as m from '$lib/paraglide/messages.js';
+	import { baseLocale, getLocale } from '$lib/paraglide/runtime';
 	import LanguageSwitch from '$lib/components/LanguageSwitch.svelte';
+
+	const getBasePath = () => {
+		const locale = getLocale();
+
+		return `${base}${locale !== baseLocale ? `/${locale}` : ''}`;
+	};
 </script>
 
 <nav>
@@ -16,10 +23,14 @@
 			</li>
 		{/snippet}
 
-		{@render navLink(`${base}/`, m['nav.home_label'](), m['nav.home_description']())}
-		{@render navLink(`${base}/about`, m['nav.about_label'](), m['nav.about_description']())}
+		{@render navLink(`${getBasePath()}/`, m['nav.home_label'](), m['nav.home_description']())}
 		{@render navLink(
-			`${base}/projects`,
+			`${getBasePath()}/about`,
+			m['nav.about_label'](),
+			m['nav.about_description']()
+		)}
+		{@render navLink(
+			`${getBasePath()}/projects`,
 			m['nav.projects_label'](),
 			m['nav.projects_description']()
 		)}
