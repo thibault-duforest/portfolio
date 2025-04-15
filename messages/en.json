@@ -6,7 +6,7 @@
     "about_label": "About me",
     "about_description": "Discover the details of my profile",
     "projects_label": "Portfolio",
-    "projects_description": "Show clients I have worked with"
+    "projects_description": "Show my professional experiences"
   },
   "language_switcher": {
     "french": "Site in French",
@@ -38,9 +38,6 @@
     "lang_level_fluent": "Fluent",
     "lang_level_school": "High school level"
   },
-  "projects": {
-    "title": "Clients I have worked with"
-  },
   "project": {
     "back": "Back to projects",
     "description": "Description",
@@ -68,5 +65,8 @@
       "tech": "Technological monitoring",
       "creativity": "Creativity"
     }
+  },
+  "projects": {
+    "title": "My professional experiences"
   }
 }

@@ -6,7 +6,7 @@
     "about_label": "A propos de moi",
     "about_description": "Découvrez le détail de mon profile",
     "projects_label": "Portfolio",
-    "projects_description": "Afficher les clients avec qui j'ai collaboré"
+    "projects_description": "Afficher mes expériences professionelles"
   },
   "language_switcher": {
     "french": "Site en français",
@@ -39,7 +39,7 @@
     "lang_level_school": "Niveau lycée"
   },
   "projects": {
-    "title": "Les clients avec qui j'ai travaillé"
+    "title": "Mes expériences professionelles"
   },
   "project": {
     "back": "Retour aux projects",
