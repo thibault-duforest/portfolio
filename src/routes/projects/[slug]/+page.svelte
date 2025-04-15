@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 
 	import * as m from '$lib/paraglide/messages.js';
 	import type { queryMatches } from '$lib/types/mediaQuery.js';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
+	import { getBasePath } from '$lib/utils/route';
 
 	export let data;
 
 	function goBack() {
-		goto(`${base}/projects`);
+		goto(`${getBasePath()}/projects`);
 	}
 </script>
 
