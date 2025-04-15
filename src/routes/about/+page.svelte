@@ -127,7 +127,6 @@
 						<div>
 							<div class="mb-1 flex justify-between">
 								<span class="text-sm font-medium text-gray-700">{skill.name}</span>
-								<span class="text-sm font-medium text-gray-500">{skill.level}</span>
 							</div>
 							<div class="h-2 rounded-full bg-gray-200">
 								<div
