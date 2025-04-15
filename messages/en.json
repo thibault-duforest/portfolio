@@ -1,6 +1,72 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "nav": {
+    "home_label": "Welcome !",
+    "home_description": "Return to the home page",
+    "about_label": "About me",
+    "about_description": "Discover the details of my profile",
+    "projects_label": "Portfolio",
+    "projects_description": "Show clients I have worked with"
+  },
+  "language_switcher": {
+    "french": "Site in French",
+    "english": "English website"
+  },
   "home": {
-    "welcome": "Hello {username}"
+    "profile_description": "As an experienced front-end developer, I help businesses design and optimize modern, high-performance, and accessible web interfaces. Specializing in modern JavaScript technologies and high-quality integration, I implement solutions that adhere to web standards and accessibility best practices.",
+    "portfolio_github_link_label": "Portfolio made with SvelteKit",
+    "contact_title": "Interested in a collaboration?",
+    "contact_content": "I am available for freelance assignments. Feel free to contact me to discuss your project.",
+    "contact_cta": "Contact me"
+  },
+  "about": {
+    "job_title": "Senior Front-End Developer",
+    "age": "37 years old",
+    "years_of_experience": "13 years of experience",
+    "presentation_1": "A front-end developer since 2011, I work freelance with companies to design and optimize modern, efficient, and accessible web interfaces.",
+    "presentation_2": "I integrate applications in HTML/CSS in compliance with good accessibility practices and I also have experience in Design System and Design Tokens, allowing me to guarantee the visual and technical consistency of the interfaces.",
+    "presentation_3": "With extensive expertise in JavaScript and TypeScript, I work on the development of complex applications (ReactJS, VueJS). Sensitive to quality and automation issues, I integrate unit testing strategies to ensure the robustness and maintainability of projects.",
+    "skills_title": "SKILLS",
+    "education_title": "Training",
+    "education_web_technician": "Web Technician",
+    "education_business_techniques": "DUT Marketing Techniques",
+    "lang_title": "Languages",
+    "lang_french": "French",
+    "lang_english": "English",
+    "lang_spanish": "Spanish",
+    "lang_level_mother_tongue": "Native language",
+    "lang_level_fluent": "Fluent",
+    "lang_level_school": "High school level"
+  },
+  "projects": {
+    "title": "Clients I have worked with"
+  },
+  "project": {
+    "back": "Back to projects",
+    "description": "Description",
+    "jobs": "Missions",
+    "source_code": "Source code",
+    "website": "Website"
+  },
+  "skills": {
+    "categories": {
+      "integration": "Integration",
+      "design": "Design",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "quality": "Quality",
+      "tools": "Tools",
+      "soft_skills": "Soft skills"
+    },
+    "labels": {
+      "accessibility": "RGAA Accessibility",
+      "unit_test": "Unit Tests",
+      "communication": "Communication",
+      "team_spirit": "Team spirit",
+      "analysis": "Analytical mind",
+      "time": "Time management",
+      "tech": "Technological monitoring",
+      "creativity": "Creativity"
+    }
   }
 }

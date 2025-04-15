@@ -13,14 +13,24 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/writing-tests/test-addon
 export default defineConfig({
-	plugins: [paraglideVitePlugin({
-		project: './project.inlang',
-		outdir: './src/lib/paraglide',
-		strategy: ['url', 'preferredLanguage', 'baseLocale']
-	}),
-	tailwindcss(),
-	sveltekit(),
-	enhancedImages(),
+	plugins: [
+		paraglideVitePlugin({
+			project: './project.inlang',
+			outdir: './src/lib/paraglide',
+			strategy: ['url', 'preferredLanguage', 'baseLocale'],
+			urlPatterns: [
+				{
+					pattern: "/{portfolio/}?:path(.*)?",
+					localized: [
+						["fr", "/{portfolio/}/:path(.*)?"],
+						["en", "/{portfolio/}?en/:path(.*)?"],
+					],
+				},
+			],
+		}),
+		tailwindcss(),
+		sveltekit(),
+		enhancedImages(),
 	],
 	test: {
 		workspace: [

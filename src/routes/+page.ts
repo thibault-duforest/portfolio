@@ -1,11 +1,13 @@
 import type { Picture } from 'vite-imagetools';
 import ProfilePicture from "$lib/assets/images/thibault-duforest.png?enhanced"
+import * as m from '$lib/paraglide/messages.js';
 
 export async function load() {
     interface Profile {
         name: string,
         picture: Picture,
         title: string,
+        age: string,
         status: string,
         experience: string,
         location: string,
@@ -20,9 +22,10 @@ export async function load() {
     const profile: Profile = {
         name: 'Thibault DUFOREST',
         picture: ProfilePicture,
-        title: 'Développeur Front-End sénior',
+        title: m['about.job_title'](),
+        age: m['about.age'](),
         status: 'Freelance',
-        experience: "13 ans d'expérience",
+        experience: m['about.years_of_experience'](),
         location: 'Valenton, 94460, FRANCE',
         phone: '06 16 45 14 86',
         email: 'duforest.thibault@gmail.com',

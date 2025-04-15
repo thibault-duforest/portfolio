@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	import type { Skill } from '$lib/types/skill';
+	import * as m from '$lib/paraglide/messages.js';
 
 	onMount(() => {
 		const skillBars = document.querySelectorAll<HTMLElement>('.skill-bar');
@@ -47,7 +49,7 @@
 				d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 			/>
 		</svg>
-		<span>37 ans</span>
+		<span>{m['about.age']()}</span>
 	</div>
 
 	<div class="flex items-center text-gray-600">
@@ -89,7 +91,7 @@
 				d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 			/>
 		</svg>
-		<span>13 ans d'expérience</span>
+		<span>{m['about.years_of_experience']()}</span>
 	</div>
 </div>
 
@@ -98,26 +100,20 @@
 	<h2 class="mb-4 text-xl font-semibold text-gray-800">Profil</h2>
 	<div class="space-y-3 text-gray-700">
 		<p>
-			Développeur Front-End depuis 2011, j'accompagne les entreprises en freelance pour concevoir et
-			optimiser des interfaces web modernes, performantes et accessibles.
+			{m['about.presentation_1']()}
 		</p>
 		<p>
-			J'intègre des applications en HTML/CSS dans le respect des bonnes pratiques d'accessibilité et
-			je possède également de l'expérience en Design System et Design Tokens, permettant de garantir
-			la cohérence visuelle et technique des interfaces.
+			{m['about.presentation_2']()}
 		</p>
 		<p>
-			Fort d'une expertise approfondie en JavaScript et TypeScript, j'interviens sur le
-			développement d'applications complexes (ReactJS, VueJS). Sensible aux enjeux de qualité et
-			d'automatisation, j'intègre des stratégies de tests unitaires pour assurer la robustesse et la
-			maintenabilité des projets.
+			{m['about.presentation_3']()}
 		</p>
 	</div>
 </div>
 
 <!-- Skills -->
 <div class="mt-10">
-	<h2 class="mb-6 text-xl font-semibold text-gray-800">Compétences</h2>
+	<h2 class="mb-6 text-xl font-semibold text-gray-800">{m['about.skills_title']()}</h2>
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 		{#each categories as category}
 			<div class="rounded-lg bg-gray-50 p-4">
@@ -147,16 +143,16 @@
 <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
 	<!-- Education -->
 	<div>
-		<h2 class="mb-4 text-xl font-semibold text-gray-800">Formation</h2>
+		<h2 class="mb-4 text-xl font-semibold text-gray-800">{m['about.education_title']()}</h2>
 		<div class="space-y-3">
 			<div class="border-l-2 border-blue-200 pl-4">
 				<p class="text-sm text-gray-500">2010 - 2012</p>
-				<p class="font-medium text-gray-800">Technicien du Web</p>
+				<p class="font-medium text-gray-800">{m['about.education_web_technician']()}</p>
 				<p class="text-gray-600">CIFACOM, Montreuil</p>
 			</div>
 			<div class="border-l-2 border-blue-200 pl-4">
 				<p class="text-sm text-gray-500">2006 - 2009</p>
-				<p class="font-medium text-gray-800">DUT Techniques de commercialisation</p>
+				<p class="font-medium text-gray-800">{m['about.education_business_techniques']()}</p>
 				<p class="text-gray-600">UIT de Roubaix, Roubaix</p>
 			</div>
 		</div>
@@ -164,7 +160,7 @@
 
 	<!-- Languages -->
 	<div>
-		<h2 class="mb-4 text-xl font-semibold text-gray-800">Langues</h2>
+		<h2 class="mb-4 text-xl font-semibold text-gray-800">{m['about.lang_title']()}</h2>
 		<div class="space-y-3">
 			<div class="flex items-center">
 				<div class="flex-shrink-0">
@@ -174,8 +170,8 @@
 					>
 				</div>
 				<div class="ml-3">
-					<p class="font-medium text-gray-800">Français</p>
-					<p class="text-sm text-gray-600">Langue maternelle</p>
+					<p class="font-medium text-gray-800">{m['about.lang_french']()}</p>
+					<p class="text-sm text-gray-600">{m['about.lang_level_mother_tongue']()}</p>
 				</div>
 			</div>
 			<div class="flex items-center">
@@ -186,8 +182,8 @@
 					>
 				</div>
 				<div class="ml-3">
-					<p class="font-medium text-gray-800">Anglais</p>
-					<p class="text-sm text-gray-600">Courant</p>
+					<p class="font-medium text-gray-800">{m['about.lang_english']()}</p>
+					<p class="text-sm text-gray-600">{m['about.lang_level_fluent']()}</p>
 				</div>
 			</div>
 			<div class="flex items-center">
@@ -198,8 +194,8 @@
 					>
 				</div>
 				<div class="ml-3">
-					<p class="font-medium text-gray-800">Espagnol</p>
-					<p class="text-sm text-gray-600">Niveau lycée</p>
+					<p class="font-medium text-gray-800">{m['about.lang_spanish']()}</p>
+					<p class="text-sm text-gray-600">{m['about.lang_level_school']()}</p>
 				</div>
 			</div>
 		</div>

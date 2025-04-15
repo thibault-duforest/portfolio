@@ -3,6 +3,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 
+	import * as m from '$lib/paraglide/messages.js';
 	import type { queryMatches } from '$lib/types/mediaQuery.js';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
 
@@ -33,7 +34,7 @@
 				d="M10 19l-7-7m0 0l7-7m-7 7h18"
 			/>
 		</svg>
-		Retour aux projets
+		{m['project.back']()}
 	</button>
 
 	<div class="overflow-hidden bg-white shadow-lg sm:rounded-lg" in:fly={{ y: 50, duration: 400 }}>
@@ -82,12 +83,12 @@
 			</div>
 
 			<div class="mb-8">
-				<h2 class="mb-4 text-xl font-semibold">Description</h2>
+				<h2 class="mb-4 text-xl font-semibold">{m['project.description']()}</h2>
 				<p class="text-gray-700">{data.project.description}</p>
 			</div>
 
 			<div class="mb-8">
-				<h2 class="mb-4 text-xl font-semibold">Missions</h2>
+				<h2 class="mb-4 text-xl font-semibold">{m['project.jobs']()}</h2>
 				<ul class="list-disc space-y-2 pl-5">
 					{#each data.project.missions as mission}
 						<li class="text-gray-700">{mission}</li>
@@ -103,7 +104,7 @@
 						rel="noopener noreferrer"
 						class="flex items-center justify-center rounded-lg bg-gray-800 px-6 py-3 text-white transition-colors hover:bg-gray-900"
 					>
-						Code source
+						{m['project.source_code']()}
 						<svg
 							class="ml-2 h-5 w-5"
 							viewBox="0 0 24 24"
@@ -126,7 +127,7 @@
 						rel="noopener noreferrer"
 						class="flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
 					>
-						Site internet
+						{m['project.website']()}
 						<svg
 							class="ml-2 h-5 w-5"
 							viewBox="0 0 24 24"

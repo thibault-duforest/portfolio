@@ -2,6 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
+	import * as m from '$lib/paraglide/messages.js';
 
 	export let data;
 
@@ -10,7 +11,9 @@
 	}
 </script>
 
-<h1 class="mb-12 text-3xl font-bold text-gray-800">Mes missions et projets</h1>
+<h1 class="mb-12 text-3xl font-bold text-gray-800">
+	{m['projects.title']()}
+</h1>
 
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 	{#each data.projects as project (project.id)}

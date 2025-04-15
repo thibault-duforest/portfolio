@@ -1,6 +1,72 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+  "nav": {
+    "home_label": "Bienvenue !",
+    "home_description": "Retourner à la page d'accueil",
+    "about_label": "A propos de moi",
+    "about_description": "Découvrez le détail de mon profile",
+    "projects_label": "Portfolio",
+    "projects_description": "Afficher les clients avec qui j'ai collaboré"
+  },
+  "language_switcher": {
+    "french": "Site en français",
+    "english": "Site en anglais"
+  },
   "home": {
-    "welcome": "Bonjour {username}"
+    "profile_description": "Développeur Front-End expérimenté, j'accompagne les entreprises pour concevoir et optimiser des interfaces web modernes, performantes et accessibles. Spécialisé dans les technologies JavaScript modernes et l'intégration de qualité, je mets en œuvre des solutions respectant les standards du web et les bonnes pratiques d'accessibilité.",
+    "portfolio_github_link_label": "Portfolio fait avec SvelteKit",
+    "contact_title": "Intéressé par une collaboration ?",
+    "contact_content": "Je suis disponible pour des missions freelance. N'hésitez pas à me contacter pour discuter de votre projet.",
+    "contact_cta": "Me contacter"
+  },
+  "about": {
+    "job_title": "Développeur Front-End sénior",
+    "age": "37 ans",
+    "years_of_experience": "13 ans d'expérience",
+    "presentation_1": "Développeur Front-End depuis 2011, j'accompagne les entreprises en freelance pour concevoir et optimiser des interfaces web modernes, performantes et accessibles.",
+    "presentation_2": "J'intègre des applications en HTML/CSS dans le respect des bonnes pratiques d'accessibilité et je possède également de l'expérience en Design System et Design Tokens, permettant de garantir la cohérence visuelle et technique des interfaces.",
+    "presentation_3": "Fort d'une expertise approfondie en JavaScript et TypeScript, j'interviens sur le développement d'applications complexes (ReactJS, VueJS). Sensible aux enjeux de qualité et d'automatisation, j'intègre des stratégies de tests unitaires pour assurer la robustesse et la maintenabilité des projets.",
+    "skills_title": "Compétences",
+    "education_title": "Formation",
+    "education_web_technician": "Technicien du Web",
+    "education_business_techniques": "DUT Techniques de commercialisation",
+    "lang_title": "Languages",
+    "lang_french": "Français",
+    "lang_english": "Anglais",
+    "lang_spanish": "Espagnol",
+    "lang_level_mother_tongue": "Langue maternelle",
+    "lang_level_fluent": "Courant",
+    "lang_level_school": "Niveau lycée"
+  },
+  "projects": {
+    "title": "Les clients avec qui j'ai travaillé"
+  },
+  "project": {
+    "back": "Retour aux projects",
+    "description": "Description",
+    "jobs": "Missions",
+    "source_code": "Code source",
+    "website": "Site internet"
+  },
+  "skills": {
+    "categories": {
+      "integration": "Intégration",
+      "design": "Design",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "quality": "Qualité",
+      "tools": "Outils",
+      "soft_skills": "Soft skills"
+    },
+    "labels": {
+      "accessibility": "Accessibilité RGAA",
+      "unit_test": "Tests Unitaires",
+      "communication": "Communication",
+      "team_spirit": "Esprit d'équipe",
+      "analysis": "Esprit d'analyse",
+      "time": "Gestion du temps",
+      "tech": "Veuille technologique",
+      "creativity": "Créativité"
+    }
   }
 }
