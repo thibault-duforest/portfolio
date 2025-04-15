@@ -1,16 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
 
 	import * as m from '$lib/paraglide/messages.js';
-	import { baseLocale, getLocale } from '$lib/paraglide/runtime';
 	import LanguageSwitch from '$lib/components/LanguageSwitch.svelte';
-
-	const getBasePath = () => {
-		const locale = getLocale();
-
-		return `${base}${locale !== baseLocale ? `/${locale}` : ''}`;
-	};
+	import { getBasePath } from '$lib/utils/route';
 </script>
 
 <nav>

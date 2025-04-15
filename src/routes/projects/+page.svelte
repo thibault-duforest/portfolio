@@ -2,12 +2,14 @@
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
+
 	import * as m from '$lib/paraglide/messages.js';
+	import { getBasePath } from '$lib/utils/route';
 
 	export let data;
 
 	function navigateToProject(slug: string) {
-		goto(`${base}/projects/${slug}`);
+		goto(`${getBasePath()}/projects/${slug}`);
 	}
 </script>
 
