@@ -1,22 +1,31 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
+	import { browser } from '$app/environment';
 
 	import { setLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
 	import { Lang } from '$lib/types/localisation';
 
-	export let initialLanguage = 'fr';
+	export let initialLanguage = Lang.FR;
 
-	const language = writable(initialLanguage);
+	const language = writable((browser && localStorage.getItem('language')) || initialLanguage);
+	console.log($language);
 
 	function switchLanguage(lang: Lang) {
 		language.set(lang);
 		setLocale(lang);
+
+		if (browser) {
+			localStorage.setItem('language', lang);
+		}
 	}
 </script>
 
-<div class="flex space-x-2">
-	<button on:click={() => switchLanguage(Lang.FR)} class="hover:cursor-pointer focus:outline-none">
+{#if $language !== Lang.FR}
+	<button
+		on:click={() => switchLanguage(Lang.FR)}
+		class="p-2 hover:cursor-pointer focus:outline-none"
+	>
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
 			><path fill="#fff" d="M10 4H22V28H10z"></path><path
 				d="M5,4h6V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z"
@@ -36,7 +45,12 @@
 		>
 		<span class="sr-only">{m['language_switcher.french']()}</span>
 	</button>
-	<button on:click={() => switchLanguage(Lang.EN)} class="hover:cursor-pointer focus:outline-none">
+{/if}
+{#if $language !== Lang.EN}
+	<button
+		on:click={() => switchLanguage(Lang.EN)}
+		class="p-2 hover:cursor-pointer focus:outline-none"
+	>
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
 			><rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect><path
 				d="M5.101,4h-.101c-1.981,0-3.615,1.444-3.933,3.334L26.899,28h.101c1.981,0,3.615-1.444,3.933-3.334L5.101,4Z"
@@ -80,4 +94,4 @@
 		>
 		<span class="sr-only">{m['language_switcher.english']()}</span>
 	</button>
-</div>
+{/if}
