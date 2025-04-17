@@ -1,23 +1,15 @@
 <script lang="ts">
 	import { writable } from 'svelte/store';
-	import { browser } from '$app/environment';
 
-	import { setLocale } from '$lib/paraglide/runtime.js';
+	import { getLocale, setLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
 	import { Lang } from '$lib/types/localisation';
 
-	export let initialLanguage = Lang.FR;
-
-	const language = writable((browser && localStorage.getItem('language')) || initialLanguage);
-	console.log($language);
+	const language = writable(getLocale());
 
 	function switchLanguage(lang: Lang) {
 		language.set(lang);
 		setLocale(lang);
-
-		if (browser) {
-			localStorage.setItem('language', lang);
-		}
 	}
 </script>
 
