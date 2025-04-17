@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { beforeNavigate } from '$app/navigation';
 
 	import * as m from '$lib/paraglide/messages.js';
 	import LanguageSwitch from '$lib/components/LanguageSwitch.svelte';
@@ -10,6 +11,12 @@
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	function closeMenu() {
+		isMenuOpen = false;
+	}
+
+	beforeNavigate(() => closeMenu());
 </script>
 
 <nav
