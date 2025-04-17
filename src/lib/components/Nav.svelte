@@ -22,13 +22,13 @@
 <nav
 	class="flex flex-row items-center justify-between lg:flex-col lg:items-start lg:justify-normal"
 >
-	<button on:click={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
+	<button onclick={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
 		<svg class="block h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 			<rect y="5" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
 			<rect y="11" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
 			<rect y="17" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
 		</svg>
-		<span class="sr-only">Ouvrir la navigation</span>
+		<span class="sr-only">{m['nav.open_navigation']()}</span>
 	</button>
 
 	<div
@@ -60,7 +60,7 @@
 				)}
 			</ul>
 
-			<button on:click={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
+			<button onclick={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
 				<svg
 					class="block h-6 w-6 fill-current"
 					viewBox="0 0 24 24"
@@ -85,7 +85,7 @@
 						stroke-linecap="round"
 					/>
 				</svg>
-				<span class="sr-only">Fermer la navigation</span>
+				<span class="sr-only">{m['nav.close_navigation']()}</span>
 			</button>
 		</div>
 	</div>

@@ -6,7 +6,9 @@
     "about_label": "About me",
     "about_description": "Discover the details of my profile",
     "projects_label": "Portfolio",
-    "projects_description": "Show my professional experiences"
+    "projects_description": "Show my professional experiences",
+    "open_navigation": "Open navigation",
+    "close_navigation": "Close navigation"
   },
   "language_switcher": {
     "french": "Site in French",
