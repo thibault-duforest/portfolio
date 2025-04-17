@@ -13,15 +13,15 @@ And with the help of Claude Sonnet 3.7
 
 ### Features
 
-- Add EN site
+- Add EN site - WIP
 - Add a Lab page (personnal projects)
 - Rework theming
 
 ### Bugfixes
 
-- Fix scroll position on route change
 - Fix more tailwind classes
-- Fix image tag warning on homepage
+- Fix mobile side nav flickering on window's resize
+- Fix switchLanguage icon flickering on EN site page load
 
 ### Other
 
