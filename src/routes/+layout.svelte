@@ -8,7 +8,7 @@
 </script>
 
 <div class="m-auto flex h-screen flex-col lg:flex-row">
-	<div class="h-15 w-full bg-gray-800 p-4 text-white md:h-auto lg:w-52">
+	<div class="h-24 w-full bg-gray-800 p-4 text-white md:h-auto lg:w-52">
 		<Nav />
 	</div>
 
