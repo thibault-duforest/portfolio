@@ -13,7 +13,6 @@ And with the help of Claude Sonnet 3.7
 
 ### Features
 
-- Add EN site - WIP
 - Add a Lab page (personnal projects)
 - Rework theming
 
