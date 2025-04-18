@@ -1,4 +1,5 @@
 import type { Picture } from 'vite-imagetools';
+
 import ProfilePicture from "$lib/assets/images/thibault-duforest.png?enhanced"
 import * as m from '$lib/paraglide/messages.js';
 
