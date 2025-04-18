@@ -3,8 +3,9 @@
 	import { beforeNavigate } from '$app/navigation';
 
 	import * as m from '$lib/paraglide/messages.js';
+	import { RoutePath } from '$lib/types/route';
 	import LanguageSwitch from '$lib/components/LanguageSwitch.svelte';
-	import { getBasePath } from '$lib/utils/route';
+	import { getLocalizedUrl } from '$lib/utils/route';
 
 	let isMenuOpen = $state(false);
 
@@ -41,20 +42,21 @@
 			<ul class="flex flex-col space-x-4 sm:flex-row lg:block lg:space-y-4 lg:space-x-0">
 				{#snippet navLink(href: string, label: string, title: string)}
 					<li class="py-3 sm:py-0">
-						<a {href} {title} class="hover:text-gray-300" class:active={page.url.pathname === href}>
+						<a
+							href={getLocalizedUrl(href)}
+							{title}
+							class="hover:text-gray-300"
+							class:active={page.url.pathname === href}
+						>
 							{label}
 						</a>
 					</li>
 				{/snippet}
 
-				{@render navLink(`${getBasePath()}/`, m['nav.home_label'](), m['nav.home_description']())}
+				{@render navLink(RoutePath.HOME, m['nav.home_label'](), m['nav.home_description']())}
+				{@render navLink(RoutePath.ABOUT, m['nav.about_label'](), m['nav.about_description']())}
 				{@render navLink(
-					`${getBasePath()}/about`,
-					m['nav.about_label'](),
-					m['nav.about_description']()
-				)}
-				{@render navLink(
-					`${getBasePath()}/projects`,
+					RoutePath.PROJECTS,
 					m['nav.projects_label'](),
 					m['nav.projects_description']()
 				)}

@@ -20,6 +20,27 @@ export default defineConfig({
 			strategy: ['url', 'preferredLanguage', 'baseLocale'],
 			urlPatterns: [
 				{
+					pattern: "/{portfolio/}about",
+					localized: [
+						["fr", "/{portfolio/}a-propos"],
+						["en", "/{portfolio/}about"],
+					],
+				},
+				{
+					pattern: "/{portfolio/}projects",
+					localized: [
+						["fr", "/{portfolio/}projets"],
+						["en", "/{portfolio/}projects"],
+					],
+				},
+				{
+					pattern: "/{portfolio/}projects/:slug",
+					localized: [
+						["fr", "/{portfolio/}projets/:slug"],
+						["en", "/{portfolio/}projects/:slug"],
+					],
+				},
+				{
 					pattern: "/{portfolio/}?:path(.*)?",
 					localized: [
 						["fr", "/{portfolio/}/:path(.*)?"],

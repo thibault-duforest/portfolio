@@ -3,12 +3,13 @@
 	import { goto } from '$app/navigation';
 
 	import * as m from '$lib/paraglide/messages.js';
-	import { getBasePath } from '$lib/utils/route';
+	import { RoutePath } from '$lib/types/route';
+	import { getLocalizedUrl } from '$lib/utils/route';
 
 	export let data;
 
 	function navigateToProject(slug: string) {
-		goto(`${getBasePath()}/projects/${slug}`);
+		goto(getLocalizedUrl(`${RoutePath.PROJECTS}/${slug}`));
 	}
 </script>
 

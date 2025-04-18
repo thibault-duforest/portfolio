@@ -3,14 +3,15 @@
 	import { goto } from '$app/navigation';
 
 	import * as m from '$lib/paraglide/messages.js';
-	import type { queryMatches } from '$lib/types/mediaQuery.js';
+	import type { queryMatches } from '$lib/types/mediaQuery';
+	import { RoutePath } from '$lib/types/route';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
-	import { getBasePath } from '$lib/utils/route';
+	import { getLocalizedUrl } from '$lib/utils/route';
 
 	export let data;
 
 	function goBack() {
-		goto(`${getBasePath()}/projects`);
+		goto(getLocalizedUrl(RoutePath.PROJECTS));
 	}
 </script>
 

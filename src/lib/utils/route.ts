@@ -1,8 +1,4 @@
 import { base } from '$app/paths';
-import { baseLocale, getLocale } from '$lib/paraglide/runtime';
+import { localizeHref } from '$lib/paraglide/runtime';
 
-export const getBasePath = () => {
-    const locale = getLocale();
-
-    return `${base}${locale !== baseLocale ? `/${locale}` : ''}`;
-};
+export const getLocalizedUrl = (path: string) => localizeHref(`${base}${path}`);
