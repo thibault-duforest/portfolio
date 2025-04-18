@@ -35,7 +35,7 @@
 				d="M10 19l-7-7m0 0l7-7m-7 7h18"
 			/>
 		</svg>
-		{m['project.back']()}
+		{m.project_back()}
 	</button>
 
 	<div class="overflow-hidden bg-white shadow-lg sm:rounded-lg" in:fly={{ y: 50, duration: 400 }}>
@@ -84,12 +84,12 @@
 			</div>
 
 			<div class="mb-8">
-				<h2 class="mb-4 text-xl font-semibold">{m['project.description']()}</h2>
+				<h2 class="mb-4 text-xl font-semibold">{m.project_description()}</h2>
 				<p class="text-gray-700">{data.project.description}</p>
 			</div>
 
 			<div class="mb-8">
-				<h2 class="mb-4 text-xl font-semibold">{m['project.jobs']()}</h2>
+				<h2 class="mb-4 text-xl font-semibold">{m.project_jobs()}</h2>
 				<ul class="list-disc space-y-2 pl-5">
 					{#each data.project.missions as mission}
 						<li class="text-gray-700">{mission}</li>
@@ -105,7 +105,7 @@
 						rel="noopener noreferrer"
 						class="flex items-center justify-center rounded-lg bg-gray-800 px-6 py-3 text-white transition-colors hover:bg-gray-900"
 					>
-						{m['project.source_code']()}
+						{m.project_source_code()}
 						<svg
 							class="ml-2 h-5 w-5"
 							viewBox="0 0 24 24"
@@ -128,7 +128,7 @@
 						rel="noopener noreferrer"
 						class="flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
 					>
-						{m['project.website']()}
+						{m.project_website()}
 						<svg
 							class="ml-2 h-5 w-5"
 							viewBox="0 0 24 24"

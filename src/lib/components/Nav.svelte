@@ -29,7 +29,7 @@
 			<rect y="11" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
 			<rect y="17" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
 		</svg>
-		<span class="sr-only">{m['nav.open_navigation']()}</span>
+		<span class="sr-only">{m.nav_open_navigation()}</span>
 	</button>
 
 	<div
@@ -53,13 +53,9 @@
 					</li>
 				{/snippet}
 
-				{@render navLink(RoutePath.HOME, m['nav.home_label'](), m['nav.home_description']())}
-				{@render navLink(RoutePath.ABOUT, m['nav.about_label'](), m['nav.about_description']())}
-				{@render navLink(
-					RoutePath.PROJECTS,
-					m['nav.projects_label'](),
-					m['nav.projects_description']()
-				)}
+				{@render navLink(RoutePath.HOME, m.nav_home_label(), m.nav_home_description())}
+				{@render navLink(RoutePath.ABOUT, m.nav_about_label(), m.nav_about_description())}
+				{@render navLink(RoutePath.PROJECTS, m.nav_projects_label(), m.nav_projects_description())}
 			</ul>
 
 			<button onclick={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
@@ -87,7 +83,7 @@
 						stroke-linecap="round"
 					/>
 				</svg>
-				<span class="sr-only">{m['nav.close_navigation']()}</span>
+				<span class="sr-only">{m.nav_close_navigation()}</span>
 			</button>
 		</div>
 	</div>

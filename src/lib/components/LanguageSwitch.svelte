@@ -35,7 +35,7 @@
 				opacity=".2"
 			></path></svg
 		>
-		<span class="sr-only">{m['language_switcher.french']()}</span>
+		<span class="sr-only">{m.language_switcher_french()}</span>
 	</button>
 {/if}
 {#if $language !== Lang.EN}
@@ -84,6 +84,6 @@
 				opacity=".2"
 			></path></svg
 		>
-		<span class="sr-only">{m['language_switcher.english']()}</span>
+		<span class="sr-only">{m.language_switcher_english()}</span>
 	</button>
 {/if}

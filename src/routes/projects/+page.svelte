@@ -14,7 +14,7 @@
 </script>
 
 <h1 class="mb-12 text-3xl font-bold text-gray-800">
-	{m['projects.title']()}
+	{m.projects_title()}
 </h1>
 
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -22,10 +22,10 @@ export async function load() {
     const profile: Profile = {
         name: 'Thibault DUFOREST',
         picture: ProfilePicture,
-        title: m['about.job_title'](),
-        age: m['about.age'](),
+        title: m.about_job_title(),
+        age: m.about_age(),
         status: 'Freelance',
-        experience: m['about.years_of_experience'](),
+        experience: m.about_years_of_experience(),
         location: 'Valenton, 94460, FRANCE',
         phone: '06 16 45 14 86',
         email: 'duforest.thibault@gmail.com',

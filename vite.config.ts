@@ -11,12 +11,12 @@ import { storybookTest } from '@storybook/experimental-addon-test/vitest-plugin'
 const dirname =
 	typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
 
-// More info at: https://storybook.js.org/docs/writing-tests/test-addon
 export default defineConfig({
 	plugins: [
 		paraglideVitePlugin({
 			project: './project.inlang',
 			outdir: './src/lib/paraglide',
+			outputStructure: process.argv.includes('dev') ? 'locale-modules' : 'message-modules',
 			strategy: ['url', 'preferredLanguage', 'baseLocale'],
 			urlPatterns: [
 				{
