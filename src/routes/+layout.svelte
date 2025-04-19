@@ -13,16 +13,6 @@
 	<title>Thibault Duforest - {m.head_title()}</title>
 	<meta name="description" content={m.head_meta_description()} />
 	<meta name="keywords" content={m.head_meta_keywords()} />
-	<meta name="author" content="Thibault Duforest" />
-	<meta name="robots" content="index, follow" />
-	<meta name="theme-color" content="#1e2939" />
-	<link rel="canonical" href="https://thibault-duforest.github.io/portfolio/" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..600&display=swap"
-		rel="stylesheet"
-	/>
 	<script type="application/ld+json">
 		{
 		  "@context": "https://schema.org",
