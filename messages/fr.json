@@ -116,5 +116,8 @@
   "project_happy_end_mission_3": "Correction cross-browser de bugs",
   "project_happy_end_mission_4": "Création d'un système de gestion de newsletter en interne",
   "project_happy_end_mission_5": "Utilisation de GIT (github) et workflow front (NPM, Grunt, Browserify, Photoshop, Chrome Dev tools etc.)",
-  "project_happy_end_mission_6": "Participation à la réflexion sur la future stratégie digitale de ZagToon"
+  "project_happy_end_mission_6": "Participation à la réflexion sur la future stratégie digitale de ZagToon",
+  "head_title": "Développeur Frontend",
+  "head_meta_description": "Développeur Frontend sénior passionné basé à Paris, France, spécialisé dans la création d'applications et sites web modernes et accessibles.",
+  "head_meta_keywords": "Développement Frontend, Développement Web, Javascript, ES6, Node, NodeJS, React, ReactJS, Vue, VueJS, Svelte, Sveltekit, HTML5, CSS3, TailwindCSS, MetarialUI, ShadCN, Storybook, UI, UX, responsive design, mobile first, accessibilité, CI, CD, Git"
 }

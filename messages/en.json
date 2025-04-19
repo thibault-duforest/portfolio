@@ -116,5 +116,8 @@
   "project_big_youth_description": "As part of a mission mandated by the developer agency Drims Creative, I strengthened the team of the web agency Big Youth.",
   "project_big_youth_mission_1": "Page creation and bug fixes for Lottomatica.",
   "project_mazarine_digital_description": "Front and back end development of showcase sites for Chanel, Dior, Chopard, Guerlain, Messika, Van Cleef, JC de Castelbajac, Volvo Cars, La Maison Villaret.",
-  "project_efficience_digital_description": "Integration of showcase and participatory sites on behalf of LMDE, MCDEF, Biocoop, Shamengo."
+  "project_efficience_digital_description": "Integration of showcase and participatory sites on behalf of LMDE, MCDEF, Biocoop, Shamengo.",
+  "head_title": "Frontend Developer",
+  "head_meta_description": "Passionate Senior Frontend Developer based in Paris, France, specializing in creating modern and accessible applications and websites.",
+  "head_meta_keywords": "Frontend Development, Web Development, Javascript, ES6, Node, NodeJS, React, ReactJS, Vue, VueJS, Svelte, Sveltekit, HTML5, CSS3, TailwindCSS, MetarialUI, ShadCN, Storybook, UI, UX, responsive design, mobile first, accessibility, CI, CD, Git"
 }
