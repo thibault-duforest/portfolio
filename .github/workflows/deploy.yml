@@ -26,6 +26,20 @@ jobs:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: touch build/.nojekyll
+
+      - name: Setup custom _headers file
+        run: |
+          echo "/*" > build/_headers
+          echo "  Cache-Control: public, max-age=3600" >> build/_headers
+          echo "/assets/*" >> build/_headers
+          echo "  Cache-Control: public, max-age=31536000, immutable" >> build/_headers
+          echo "/_app/immutable/*" >> build/_headers
+          echo "  Cache-Control: public, max-age=31536000, immutable" >> build/_headers
+          echo "/_app/version.json" >> build/_headers
+          echo "  Cache-Control: public, max-age=0, must-revalidate" >> build/_headers
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
