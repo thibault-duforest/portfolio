@@ -46,21 +46,21 @@ export async function load() {
             name: 'SvelteKit', level: '40%', categoryID: Category.FRAMEWORK, categoryLabel: m.skills_categories_frameworks()
         },
         {
-            name: m.skills_labels_accessibility(), level: '90 % ', categoryID: Category.QUALITY, categoryLabel: m.skills_categories_quality()
+            name: m.skills_labels_accessibility(), level: '90% ', categoryID: Category.QUALITY, categoryLabel: m.skills_categories_quality()
         },
-        { name: m.skills_labels_unit_test(), level: '80 % ', categoryID: Category.QUALITY, categoryLabel: m.skills_categories_quality() },
+        { name: m.skills_labels_unit_test(), level: '80% ', categoryID: Category.QUALITY, categoryLabel: m.skills_categories_quality() },
         {
             name: 'Git', level: '85%', categoryID: Category.TOOL, categoryLabel: m.skills_categories_tools()
         },
         {
             name: 'CI-CD', level: '70%', categoryID: Category.TOOL, categoryLabel: m.skills_categories_tools()
         },
-        { name: m.skills_labels_communication(), level: '100 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
-        { name: m.skills_labels_team_spirit(), level: '100 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
-        { name: m.skills_labels_analysis(), level: '95 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
-        { name: m.skills_labels_time(), level: '90 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
-        { name: m.skills_labels_tech(), level: '90 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
-        { name: m.skills_labels_creativity(), level: '85 % ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_communication(), level: '100% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_team_spirit(), level: '100% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_analysis(), level: '95% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_time(), level: '90% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_tech(), level: '90% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
+        { name: m.skills_labels_creativity(), level: '85% ', categoryID: Category.SOFT_SKILL, categoryLabel: m.skills_categories_soft_skills() },
     ];
 
     const DEFAULT_CATEGORY_COLOR_CLASS = 'bg-red-400'
