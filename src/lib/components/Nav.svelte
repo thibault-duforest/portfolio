@@ -45,7 +45,7 @@
 						<a
 							href={getLocalizedUrl(href)}
 							{title}
-							class="hover:text-gray-300"
+							class="inline-block w-full hover:text-gray-300 focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-white"
 							class:active={page.url.pathname === href}
 						>
 							{label}

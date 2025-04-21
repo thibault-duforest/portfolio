@@ -16,7 +16,7 @@
 {#if $language !== Lang.FR}
 	<button
 		on:click={() => switchLanguage(Lang.FR)}
-		class="p-2 hover:cursor-pointer focus:outline-none"
+		class="p-2 hover:cursor-pointer focus-visible:outline focus-visible:outline-white"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
 			><path fill="#fff" d="M10 4H22V28H10z"></path><path
@@ -41,7 +41,7 @@
 {#if $language !== Lang.EN}
 	<button
 		on:click={() => switchLanguage(Lang.EN)}
-		class="p-2 hover:cursor-pointer focus:outline-none"
+		class="p-2 hover:cursor-pointer focus-visible:outline focus-visible:outline-white"
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
 			><rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect><path

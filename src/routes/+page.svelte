@@ -26,7 +26,7 @@
 				{data.profile.status}
 			</span>
 		</div>
-		<h3 class="my-2 text-2xl text-gray-600">{data.profile.title} - {data.profile.experience}</h3>
+		<h2 class="my-2 text-2xl text-gray-600">{data.profile.title} - {data.profile.experience}</h2>
 		<div class="flex items-center">
 			<div class="mr-2 rounded-full">
 				<svg
@@ -45,7 +45,9 @@
 				</svg>
 			</div>
 			<div>
-				<a href={`mailto:${data.profile.email}`} class="text-blue-600 hover:underline"
+				<a
+					href={`mailto:${data.profile.email}`}
+					class="text-blue-600 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-800"
 					>{data.profile.email}</a
 				>
 			</div>
@@ -60,7 +62,7 @@
 				href={`https://${data.profile.social.linkedin}`}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="mb-4 flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+				class="mb-4 flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-800"
 			>
 				<svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 					<path
@@ -82,7 +84,7 @@
 				href={`https://${data.profile.social.github}`}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="mb-4 flex items-center rounded-lg bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-900"
+				class="mb-4 flex items-center rounded-lg bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-800"
 			>
 				<svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 					<path
@@ -104,7 +106,7 @@
 				href={`https://${data.profile.social.github}/portfolio`}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="mb-4 flex items-center rounded-lg bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-900"
+				class="mb-4 flex items-center rounded-lg bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-800"
 			>
 				<svg class="mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 					<path
@@ -149,7 +151,7 @@
 	</p>
 	<a
 		href="mailto:{data.profile.email}"
-		class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
+		class="inline-block rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-800"
 	>
 		{m.home_contact_cta()}
 	</a>

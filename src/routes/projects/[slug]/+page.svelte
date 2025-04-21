@@ -19,7 +19,7 @@
 	<button
 		type="button"
 		on:click={goBack}
-		class="mb-6 flex cursor-pointer items-center text-blue-600 transition-colors hover:text-blue-800"
+		class="mb-6 flex cursor-pointer items-center text-blue-600 transition-colors hover:text-blue-800 focus:outline-offset-4 focus:outline-gray-800"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -103,7 +103,7 @@
 						href={data.project.github}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center rounded-lg bg-gray-800 px-6 py-3 text-white transition-colors hover:bg-gray-900"
+						class="flex items-center justify-center rounded-lg bg-gray-800 px-6 py-3 text-white transition-colors hover:bg-gray-900 focus:outline-offset-4 focus:outline-gray-800"
 					>
 						{m.project_source_code()}
 						<svg
@@ -126,7 +126,7 @@
 						href={data.project.website}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
+						class="flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700 focus:outline-offset-4 focus:outline-gray-800"
 					>
 						{m.project_website()}
 						<svg
