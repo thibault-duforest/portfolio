@@ -6,6 +6,8 @@
 	import { RoutePath } from '$lib/types/route';
 	import LanguageSwitch from '$lib/components/LanguageSwitch.svelte';
 	import { getLocalizedUrl } from '$lib/utils/route';
+	import BurgerMenu from '$lib/assets/svg/burger-menu.svg?component';
+	import Close from '$lib/assets/svg/close.svg?component';
 
 	let isMenuOpen = $state(false);
 
@@ -24,11 +26,7 @@
 	class="flex flex-row items-center justify-between lg:flex-col lg:items-start lg:justify-normal"
 >
 	<button onclick={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
-		<svg class="block h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-			<rect y="5" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
-			<rect y="11" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
-			<rect y="17" width="24" height="2" rx="1" fill="currentColor" stroke-linecap="round" />
-		</svg>
+		<BurgerMenu class="block h-6 w-6 fill-current" />
 		<span class="sr-only">{m.nav_open_navigation()}</span>
 	</button>
 
@@ -59,30 +57,7 @@
 			</ul>
 
 			<button onclick={toggleMenu} class="flex items-center p-3 text-white sm:hidden">
-				<svg
-					class="block h-6 w-6 fill-current"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<line
-						x1="5"
-						y1="5"
-						x2="19"
-						y2="19"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-					/>
-					<line
-						x1="19"
-						y1="5"
-						x2="5"
-						y2="19"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-					/>
-				</svg>
+				<Close class="block h-6 w-6 fill-current" />
 				<span class="sr-only">{m.nav_close_navigation()}</span>
 			</button>
 		</div>

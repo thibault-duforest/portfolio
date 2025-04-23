@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
+import svg from '@poppanator/sveltekit-svg'
 import { defineConfig } from 'vite';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -52,6 +53,7 @@ export default defineConfig({
 		tailwindcss(),
 		sveltekit(),
 		enhancedImages(),
+		svg(),
 	],
 	test: {
 		workspace: [

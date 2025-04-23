@@ -7,6 +7,8 @@
 	import { RoutePath } from '$lib/types/route';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
 	import { getLocalizedUrl } from '$lib/utils/route';
+	import ArrowLeft from '$lib/assets/svg/arrow-left.svg?component';
+	import ExternalLink from '$lib/assets/svg/external-link.svg?component';
 
 	export let data;
 
@@ -21,20 +23,7 @@
 		on:click={goBack}
 		class="mb-6 flex cursor-pointer items-center text-blue-600 transition-colors hover:text-blue-800 focus:outline-offset-4 focus:outline-gray-800"
 	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="mr-2 h-5 w-5"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M10 19l-7-7m0 0l7-7m-7 7h18"
-			/>
-		</svg>
+		<ArrowLeft class="mr-2 h-5 w-5" />
 		{m.project_back()}
 	</button>
 
@@ -106,19 +95,7 @@
 						class="flex items-center justify-center rounded-lg bg-gray-800 px-6 py-3 text-white transition-colors hover:bg-gray-900 focus:outline-offset-4 focus:outline-gray-800"
 					>
 						{m.project_source_code()}
-						<svg
-							class="ml-2 h-5 w-5"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="M10 5H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 00-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/></svg
-						>
+						<ExternalLink class="ml-2 h-5 w-5" />
 					</a>
 				{/if}
 				{#if data.project.website}
@@ -129,19 +106,7 @@
 						class="flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700 focus:outline-offset-4 focus:outline-gray-800"
 					>
 						{m.project_website()}
-						<svg
-							class="ml-2 h-5 w-5"
-							viewBox="0 0 24 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							><path
-								d="M10 5H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 00-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218.377-.192.683-.498.875-.874.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/></svg
-						>
+						<ExternalLink class="ml-2 h-5 w-5" />
 					</a>
 				{/if}
 			</div>
