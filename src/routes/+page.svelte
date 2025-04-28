@@ -30,7 +30,11 @@
 				{data.profile.status}
 			</span>
 		</div>
-		<h2 class="my-2 text-2xl text-gray-600">{data.profile.title} - {data.profile.experience}</h2>
+		<div class="my-2 text-2xl text-gray-600">
+			<h2 class="inline-block">{data.profile.title}</h2>
+			<span> - </span>
+			<p class="block sm:inline-block">{data.profile.experience}</p>
+		</div>
 		<div class="flex items-center">
 			<div class="mr-2 rounded-full">
 				<Email class="h-6 w-6 text-blue-600" />
