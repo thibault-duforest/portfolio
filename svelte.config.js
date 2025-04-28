@@ -28,9 +28,8 @@ const config = {
 	},
 
 	compilerOptions: {
-		warningFilter: {
-			["a11y_no_noninteractive_tabindex"]: "ignore"
-		}
+		warningFilter: (warning) => !["a11y_no_noninteractive_tabindex"].includes(warning.code)
+		
 	}
 };
 
