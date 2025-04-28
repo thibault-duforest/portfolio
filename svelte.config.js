@@ -25,6 +25,12 @@ const config = {
 		paths: {
             base: '/portfolio'
         }
+	},
+
+	compilerOptions: {
+		warningFilter: {
+			["a11y_no_noninteractive_tabindex"]: "ignore"
+		}
 	}
 };
 

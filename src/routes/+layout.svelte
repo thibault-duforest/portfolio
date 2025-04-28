@@ -29,7 +29,10 @@
 		<Nav />
 	</div>
 
-	<main class="w-full overflow-auto">
+	<main
+		class="w-full overflow-auto focus-visible:outline-2 focus-visible:-outline-offset-8"
+		tabindex="0"
+	>
 		<div class="container mx-auto px-4 py-8">
 			{@render children()}
 		</div>
